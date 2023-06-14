@@ -1,0 +1,24 @@
+body {
+    background-color: palegoldenrod;
+    color: maroon;
+}
+
+.section {
+    background-color: orange;
+    padding: 5px;
+    margin: 5px;
+    border: 2px solid maroon;
+    border-radius: 5px;
+}
+
+img {
+    border: 2px solid maroon;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+}
