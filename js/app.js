@@ -93,7 +93,7 @@ let fifthQuestion = "";
 while (fifthQuestion !== "y" && fifthQuestion !== "yes" && fifthQuestion !== "n" && fifthQuestion !== "no") {
     fifthQuestion = prompt("Was I sold into slavery as a child and trained to be a fighter in an underground fight club, only to eventually fight my way out of it in a gruesome manner, leaving many bodies and my old life behind to start a new beginning by signing up to the Tech Educators Full-Stack MERN Developer course?").toLowerCase();
 
-    switch (fifthQuestion.toLowerCase()) {
+    switch (fifthQuestion) {
         case "yes":
         case "y": 
             alert("Incorrect!");
@@ -108,9 +108,40 @@ while (fifthQuestion !== "y" && fifthQuestion !== "yes" && fifthQuestion !== "n"
     }
 }
 
-alert("You got " + quizScore + " out of 5 questions right.")
+/*
+let sixthQuestion = "";
 
-//let sixthQuestion = prompt()
+let sixthQuestionAttempts = 1;
+
+while (sixthQuestion !== "1" && sixthQuestion !== "2" && sixthQuestion !== "3" && sixthQuestion !== "4" && sixthQuestion !== "5" && sixthQuestion !== "6" && sixthQuestion !== "7" && sixthQuestion !== "8" && sixthQuestion !== "9" && sixthQuestion !== "10") {
+    sixthQuestion = prompt("Now, let's play a guessing game. Guess a number between 1 and 10. You have 4 attempts.");
+
+    switch (sixthQuestion) {
+        case "1":
+        case "2":
+        case "3":
+        case "4":
+        case "5":
+        case "6": 
+            alert("Incorrect. Your guess was too low. Try again!");
+            break;
+        case "7":
+            quizScore += 1;
+            alert("Correct!");
+            break;
+        case "8":
+        case "9":
+        case "10":
+            alert("Incorrect. Your guess was too high. Try again!")
+        default:
+            alert("Invalid input. Please choose a number between 1 and 10.")
+    }
+}
+*/
+
+
+
+alert("You got " + quizScore + " out of 5 questions right.")
 
 let userName = prompt("It is time for me to get to know you. What is your name?");
 
