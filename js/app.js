@@ -4,14 +4,17 @@ alert("Hi! Welcome to the webpage about me, Val!");
 
 alert("I have prepared a quiz to test your knowledge about me. Please answer the questions with yes (y) or no (n).");
 
+let quizScore = 0;
+
 let firstQuestion = prompt("Is the full version of my first name Voldemort?");
 switch (firstQuestion.toLowerCase()) {
     case "yes":
-    case "y": 
+    case "y":
         alert("Incorrect!");
         break;
     case "no":
     case "n":
+        quizScore += 1;
         alert("Correct!");
         break;
     default:
@@ -21,7 +24,8 @@ switch (firstQuestion.toLowerCase()) {
 let secondQuestion = prompt("Can I play the guitar?");
 switch (secondQuestion.toLowerCase()) {
     case "yes":
-    case "y": 
+    case "y":
+        quizScore += 1; 
         alert("Correct!");
         break;
     case "no":
@@ -40,6 +44,7 @@ switch (thirdQuestion.toLowerCase()) {
         break;
     case "no":
     case "n":
+        quizScore += 1;
         alert("Correct!");
         break;
     default:
@@ -49,7 +54,8 @@ switch (thirdQuestion.toLowerCase()) {
 let fourthQuestion = prompt("Is the colour of my eyes brown?")
 switch (fourthQuestion.toLowerCase()) {
     case "yes":
-    case "y": 
+    case "y":
+        quizScore += 1; 
         alert("Correct!");
         break;
     case "no":
@@ -67,11 +73,16 @@ switch (fifthQuestion.toLowerCase()) {
         break;
     case "no":
     case "n":
+        quizScore += 1;
         alert("Correct!");
         break;
     default:
         alert("Invalid input. Please use yes (y) or no (n) answers.")
 }
+
+alert("You got " + quizScore + " out of 5 questions right.")
+
+//let sixthQuestion = prompt()
 
 let userName = prompt("It is time for me to get to know you. What is your name?");
 
