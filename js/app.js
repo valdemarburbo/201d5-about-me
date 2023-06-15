@@ -108,40 +108,51 @@ while (fifthQuestion !== "y" && fifthQuestion !== "yes" && fifthQuestion !== "n"
     }
 }
 
-/*
-let sixthQuestion = "";
+const numberQuestionSix = "7";
 
-let sixthQuestionAttempts = 1;
+for (let i = 3; i >= 0; i--) {
 
-while (sixthQuestion !== "1" && sixthQuestion !== "2" && sixthQuestion !== "3" && sixthQuestion !== "4" && sixthQuestion !== "5" && sixthQuestion !== "6" && sixthQuestion !== "7" && sixthQuestion !== "8" && sixthQuestion !== "9" && sixthQuestion !== "10") {
-    sixthQuestion = prompt("Now, let's play a guessing game. Guess a number between 1 and 10. You have 4 attempts.");
+    let guesses = i + 1;
 
-    switch (sixthQuestion) {
-        case "1":
-        case "2":
-        case "3":
-        case "4":
-        case "5":
-        case "6": 
-            alert("Incorrect. Your guess was too low. Try again!");
-            break;
-        case "7":
-            quizScore += 1;
-            alert("Correct!");
-            break;
-        case "8":
-        case "9":
-        case "10":
-            alert("Incorrect. Your guess was too high. Try again!")
-        default:
-            alert("Invalid input. Please choose a number between 1 and 10.")
+    let guess = prompt("Guess a number between 1 and 10! You have " + guesses + " attempts.");
+
+    if (guess === numberQuestionSix) {
+        alert("You win!");
+        quizScore += 1;
+        break;
+    } else if (guess < numberQuestionSix) {
+        alert("Too low.");
+    } else if (guess > numberQuestionSix) {
+        alert("Too high.");
+    };
+
+    if (guesses === 0) {
+        alert("You are out of guesses. The correct answer was 7.")
     }
 }
-*/
+
+const numberQuestionSeven = ["1", "2", "3", "4"];
+
+for (let i = 5; i >= 0; i--) {
+
+    let guesses = i + 1;
+
+    let guess = prompt("Guess a number between 1 and 20! You have " + guesses + " attempts.");
+
+    if (guess === numberQuestionSeven[0] || guess === numberQuestionSeven[1] || guess === numberQuestionSeven[2] || guess === numberQuestionSeven[3]) {
+        alert("You win!");
+        quizScore += 1;
+        break;
+    } else if (guess < numberQuestionSeven) {
+        alert("Too low.");
+    } else if (guess > numberQuestionSeven) {
+        alert("Too high.")
+    }
+}
 
 
 
-alert("You got " + quizScore + " out of 5 questions right.")
+alert("You got " + quizScore + " out of 7 questions right.")
 
 let userName = prompt("It is time for me to get to know you. What is your name?");
 
