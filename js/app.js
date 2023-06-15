@@ -110,9 +110,9 @@ while (fifthQuestion !== "y" && fifthQuestion !== "yes" && fifthQuestion !== "n"
 
 const numberQuestionSix = "7";
 
-for (let i = 3; i >= 0; i--) {
+for (let i = 4; i >= 0; i--) {
 
-    let guesses = i + 1;
+    let guesses = i;
 
     let guess = prompt("Guess a number between 1 and 10! You have " + guesses + " attempts.");
 
@@ -126,16 +126,17 @@ for (let i = 3; i >= 0; i--) {
         alert("Too high.");
     };
 
-    if (guesses === 0) {
+    if (i === 1) {
         alert("You are out of guesses. The correct answer was 7.")
+        break;
     }
 }
 
 const numberQuestionSeven = ["1", "2", "3", "4"];
 
-for (let i = 5; i >= 0; i--) {
+for (let i = 6; i >= 0; i--) {
 
-    let guesses = i + 1;
+    let guesses = i;
 
     let guess = prompt("Guess a number between 1 and 20! You have " + guesses + " attempts.");
 
@@ -148,9 +149,12 @@ for (let i = 5; i >= 0; i--) {
     } else if (guess > numberQuestionSeven) {
         alert("Too high.")
     }
+
+    if (i === 1) {
+        alert("You are out of guesses. The correct answers were 1, 2, 3 or 4.")
+        break;
+    }
 }
-
-
 
 alert("You got " + quizScore + " out of 7 questions right.")
 
